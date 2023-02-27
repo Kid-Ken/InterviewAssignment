@@ -1,10 +1,13 @@
 package com.example.interviewassignment
 
-class CurrencyModel {
+data class CurrencyModel( var code : String?,
 
-    var code : String? = null
+                          var name : String?,
 
-    var name : String? = null
+                          var symbol : String?
+)
+{
 
-    var symbol : String?  = null
 }
+
+

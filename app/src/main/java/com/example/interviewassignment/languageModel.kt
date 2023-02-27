@@ -1,8 +1,9 @@
 package com.example.interviewassignment
 
-class languageModel {
+data class languageModel(    var code : String?,
 
-    var code : String? = null
+                             var name : String?
+                             ) {
 
-    var name : String? = null
+
 }

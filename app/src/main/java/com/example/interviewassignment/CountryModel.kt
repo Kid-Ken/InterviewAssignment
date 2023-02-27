@@ -1,19 +1,17 @@
 package com.example.interviewassignment
 
-class CountryModel {
+data class CountryModel(var capital : String?,
 
-    var capital : String? = null
+                        var code : String?,
 
-    var code : String? = null
+                        var currency : CurrencyModel?,
 
-    var currency : CurrencyModel? = null
+                        var flag : String?,
 
-    var flag : String? = null
+                        var language : languageModel?,
 
-    var language : languageModel? = null
+                        var name : String?,
 
-    var name : String? = null
-
-    var region : String? = null
+                        var region : String? ) {
 
 }
