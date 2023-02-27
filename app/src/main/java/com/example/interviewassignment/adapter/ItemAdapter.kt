@@ -30,11 +30,13 @@ class ItemAdapter(val context: Context,
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         TODO("Not yet implemented")
 
-        val name = name[position]
-        val code = code[position]
-        val capital = capital[position]
+        val name = name
+        val code = code
+        val capital = capital
 
-        holder.textViewName = name
+        holder.textViewName.text = name
+        holder.textViewCode.text = code
+        holder.textViewCapital.text = capital
     }
 
     override fun getItemCount(): Int {
