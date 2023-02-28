@@ -1,4 +1,4 @@
-package com.example.interviewassignment
+package com.example.interviewassignment.models
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import timber.log.Timber

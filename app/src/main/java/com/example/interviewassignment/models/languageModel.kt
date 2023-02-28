@@ -1,4 +1,4 @@
-package com.example.interviewassignment
+package com.example.interviewassignment.models
 
 data class languageModel(    var code : String?,
 

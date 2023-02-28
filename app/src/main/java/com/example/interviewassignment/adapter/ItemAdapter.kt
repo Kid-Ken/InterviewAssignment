@@ -1,45 +1,42 @@
 package com.example.interviewassignment.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.interviewassignment.models.CountryModel
 import com.example.interviewassignment.R
 
-class ItemAdapter(val context: Context,
-                  val name : String,
-                  val region : String,
-                  val code : String,
-                  val capital : String
+class ItemAdapter(
+    private val dataList: Array<CountryModel>
                   ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
-    class ItemViewHolder( private val view : View) : RecyclerView.ViewHolder(view){
+    class ItemViewHolder( view : View) : RecyclerView.ViewHolder(view){
+
         val textViewName = view.findViewById<TextView>(R.id.textView_name)
+        val textViewRegion = view.findViewById<TextView>(R.id.textView_region)
         val textViewCode = view.findViewById<TextView>(R.id.textView_code)
         val textViewCapital = view.findViewById<TextView>(R.id.textView_capital)
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        TODO("Not yet implemented")
-        val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+        val adapterLayout = LayoutInflater.from(parent.context)
+            .inflate(R.layout.list_item, parent, false)
         return ItemViewHolder(adapterLayout)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        TODO("Not yet implemented")
 
-        val name = name
-        val code = code
-        val capital = capital
+        val data = dataList[position]
 
-        holder.textViewName.text = name
-        holder.textViewCode.text = code
-        holder.textViewCapital.text = capital
+        holder.textViewName.text = data.name + ","
+        holder.textViewRegion.text = data.region
+        holder.textViewCode.text = "    " + data.code
+        holder.textViewCapital.text = data.capital
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return dataList.size
     }
 }
